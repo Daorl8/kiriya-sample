@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>キリヤ 키리야카페 | 부산대 일본식 과일 산도 · 에그타르트</title>
+<meta name="description" content="ひとくちの幸せ。한입의 행복, KIRIYA. 부산대역 1번 출구 도보 1분, 제철 과일과 100% 동물성 생크림으로 만드는 일본식 프리미엄 과일 산도와 에그타르트. 화~일 11:00~22:00, 월요일 휴무." />
+<link rel="canonical" href="https://kiriya-sample.lgt3232.workers.dev/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="ko_KR" />
+<meta property="og:site_name" content="キリヤ 키리야카페" />
+<meta property="og:title" content="キリヤ · ひとくちの幸せ。" />
+<meta property="og:description" content="부산대 일본식 프리미엄 과일 산도 · 에그타르트, 키리야카페." />
+<meta property="og:url" content="https://kiriya-sample.lgt3232.workers.dev/" />
+<meta property="og:image" content="https://kiriya-sample.lgt3232.workers.dev/og-kiriya.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="theme-color" content="#7E6049" />
+<link rel="icon" href="favicon.png" type="image/png" />
+<!-- 시안 도메인 = kiriya-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical·og:url·og:image·JSON-LD url/image 5곳 치환 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "키리야카페 KIRIYA",
+  "url": "https://kiriya-sample.lgt3232.workers.dev/",
+  "image": "https://kiriya-sample.lgt3232.workers.dev/og-kiriya.jpg",
+  "telephone": "+82-507-1396-5222",
+  "address": { "@type": "PostalAddress", "streetAddress": "금정로60번길 27-3 1층", "addressLocality": "금정구", "addressRegion": "부산광역시", "addressCountry": "KR" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "22:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/kiriya_cafe/"]
+}
+</script>
+<style>
+@font-face{ font-family:"KR Round"; font-weight:700; font-display:swap; src:url("kr-mplusround.woff2") format("woff2"); }
+@font-face{ font-family:"KR Sans"; font-weight:400 700; font-display:swap; src:url("kr-pretendard.woff2") format("woff2"); }
+
+:root{
+  --choc:#7E6049;        /* 바탕 체크 진한 칸 (메뉴판 바탕 밤색 계열) */
+  --choc2:#8C6D55;       /* 체크 옅은 칸 */
+  --cream:#FBF4E4;       /* 메뉴판 카드 크림 */
+  --ink:#45301F;         /* 진갈색 글자 · 크림 위 11.9:1 */
+  --soft:#6E5644;        /* 보조 글자 · 크림 위 6.6:1 */
+  --rule:#8B6A4E;        /* 이중 테두리 · 구분선 */
+  --pill:#6B4E37;        /* Signature 알약 */
+  --round:"KR Round","KR Sans",-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --sans:"KR Sans",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --wrap:1120px;
+}
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+body{ margin:0; color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.7; word-break:keep-all; overflow-wrap:break-word;
+  background-color:var(--choc); background-image:repeating-conic-gradient(from 45deg, var(--choc2) 0 25%, var(--choc) 0 50%); background-size:44px 44px; }
+img{ max-width:100%; height:auto; display:block; }
+a{ color:inherit; text-decoration:none; }
+h1,h2,h3,p{ margin:0; }
+:focus-visible{ outline:2px solid var(--ink); outline-offset:3px; }
+.wrap{ width:min(100% - 28px, var(--wrap)); margin:0 auto; }
+@media (min-width:900px){ .wrap{ width:min(100% - 64px, var(--wrap)); } }
+
+/* 메뉴판 카드: 크림 바탕 + 이중 갈색 테두리 */
+.card{ position:relative; background:var(--cream); border:2px solid var(--rule); border-radius:16px; padding:44px 22px; box-shadow:inset 0 0 0 7px var(--cream), inset 0 0 0 8.5px var(--rule); }
+@media (min-width:900px){ .card{ padding:64px 56px; } }
+.sec{ padding:28px 0; }
+@media (min-width:900px){ .sec{ padding:40px 0; } }
+
+/* 제목: 일본어 크게 + 한글 작게 */
+.ttl{ display:flex; flex-wrap:wrap; align-items:baseline; gap:6px 14px; padding-bottom:14px; border-bottom:2px solid var(--ink); }
+.ttl h2{ font-family:var(--round); font-weight:700; font-size:clamp(1.9rem,5.4vw,2.8rem); line-height:1.15; letter-spacing:.02em; }
+.ttl .ja{ font-family:var(--round); font-weight:700; font-size:1.05rem; color:var(--soft); }
+.ttl .ko{ font-size:.95rem; font-weight:600; color:var(--soft); }
+.ttl svg{ width:34px; height:34px; align-self:center; }
+.lead{ margin-top:18px; color:var(--soft); max-width:36em; }
+
+/* 버튼 */
+.btn{ display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:0 22px; border:2px solid var(--ink); border-radius:8px; font-weight:700; font-size:.95rem; transition:background .2s ease, color .2s ease; }
+.btn.fill{ background:var(--ink); color:var(--cream); }
+@media (hover:hover){ .btn:not(.fill):hover{ background:var(--ink); color:var(--cream); } .btn.fill:hover{ background:transparent; color:var(--ink); } }
+
+/* 헤더 */
+.site-head{ position:sticky; top:0; z-index:50; background:rgba(69,48,31,.96); color:var(--cream); }
+.site-head .wrap{ display:flex; align-items:center; justify-content:space-between; height:62px; }
+.brand{ display:flex; align-items:center; gap:10px; }
+.brand img{ width:38px; height:38px; }
+.brand b{ font-family:var(--round); font-weight:700; font-size:1.35rem; letter-spacing:.14em; }
+.brand small{ display:block; font-size:.7rem; letter-spacing:.16em; opacity:.8; margin-top:-2px; }
+.nav{ display:none; gap:24px; font-weight:600; font-size:.92rem; }
+@media (hover:hover){ .nav a:hover{ opacity:.75; } }
+.head-ig{ font-size:.86rem; font-weight:700; }
+@media (min-width:900px){ .nav{ display:flex; } }
+
+/* 히어로: 위가 둥근 아치 카드 (메뉴판 모양) */
+.hero{ padding:28px 0 12px; }
+@media (min-width:900px){ .hero{ padding:48px 0 20px; } }
+.hero .wrap{ display:grid; gap:22px; align-items:stretch; }
+@media (min-width:900px){ .hero .wrap{ grid-template-columns:6fr 5fr; gap:32px; } }
+.arch{ border-radius:min(46vw,300px) min(46vw,300px) 16px 16px / 180px 180px 16px 16px; padding-top:64px; text-align:center; }
+@media (min-width:900px){ .arch{ padding-top:84px; } }
+.arch .kc{ font-family:var(--round); font-weight:700; font-size:1.2rem; letter-spacing:.06em; color:var(--soft); }
+.arch .kc::after{ content:""; display:block; width:120px; height:2px; background:var(--ink); margin:12px auto 0; }
+.arch h1{ margin-top:18px; display:flex; justify-content:center; align-items:center; gap:10px; }
+.arch h1 span{ font-family:var(--round); font-weight:700; font-size:clamp(3.6rem,13vw,6.4rem); line-height:1; letter-spacing:.18em; padding-left:.18em; }
+.arch h1 img{ width:clamp(84px,18vw,128px); height:auto; }
+.arch .tag{ margin-top:22px; font-family:var(--round); font-weight:700; font-size:clamp(1.3rem,3.4vw,1.7rem); }
+.arch .tag-ko{ margin-top:4px; font-weight:600; color:var(--soft); }
+.arch .intro{ margin:20px auto 0; max-width:30em; color:var(--soft); font-size:.95rem; }
+.arch .cta{ display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:26px; }
+.arch .when{ margin-top:16px; font-size:.86rem; color:var(--soft); }
+.hero-pic{ margin:0; padding:12px; }
+.hero-pic img{ width:100%; height:100%; aspect-ratio:4/5; object-fit:cover; border-radius:10px; }
+@media (min-width:900px){ .hero-pic img{ aspect-ratio:auto; } }
+
+/* 과일 산도 */
+.sando{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:28px; }
+@media (min-width:900px){ .sando{ grid-template-columns:repeat(5,1fr); gap:18px; } }
+.sando figure{ margin:0; }
+.sando img{ width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:10px; border:2px solid var(--rule); }
+.sando figcaption{ margin-top:8px; text-align:center; }
+.sando figcaption b{ display:block; font-family:var(--round); font-weight:700; font-size:1.1rem; }
+.sando figcaption span{ font-size:.86rem; color:var(--soft); }
+.sando figure:last-child{ grid-column:1 / -1; }
+@media (min-width:900px){ .sando figure:last-child{ grid-column:auto; } }
+@media (max-width:899px){ .sando figure:last-child img{ aspect-ratio:16/10; } }
+
+/* 커피 메뉴 (사장님 메뉴판 기준) */
+.menu{ list-style:none; margin:28px 0 0; padding:0; display:grid; gap:0; }
+@media (min-width:900px){ .menu{ grid-template-columns:1fr 1fr; column-gap:56px; } }
+.menu li{ position:relative; padding:18px 0; border-bottom:1px dashed var(--rule); }
+.menu .row{ display:flex; align-items:baseline; gap:12px; }
+.menu .row b{ font-size:1.12rem; font-weight:700; }
+.menu .row .dots{ flex:1; border-bottom:2px dotted rgba(139,106,78,.5); transform:translateY(-4px); }
+.menu .row .pr{ font-family:var(--round); font-weight:700; font-size:1.15rem; font-variant-numeric:tabular-nums; }
+.menu p{ margin-top:6px; font-size:.9rem; color:var(--soft); }
+.sig{ display:inline-block; margin-bottom:6px; background:var(--pill); color:var(--cream); font-size:.78rem; font-weight:700; padding:2px 12px; border-radius:999px; transform:rotate(-6deg); }
+.menu-note{ margin-top:16px; font-size:.84rem; color:var(--soft); }
+.decaf{ margin-left:auto; font-weight:700; font-size:.95rem; }
+
+/* 타르트 · 파르페 */
+.duo{ display:grid; gap:22px; margin-top:28px; }
+@media (min-width:900px){ .duo{ grid-template-columns:1fr 1fr; gap:36px; } }
+.duo figure{ margin:0; }
+.duo img{ width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:10px; border:2px solid var(--rule); }
+.duo figcaption{ margin-top:12px; }
+.duo figcaption b{ display:block; font-family:var(--round); font-weight:700; font-size:1.3rem; }
+.duo figcaption .ja{ font-family:var(--round); font-weight:700; color:var(--soft); }
+.duo figcaption p{ margin-top:4px; color:var(--soft); font-size:.94rem; }
+
+/* 心 */
+.kokoro{ text-align:center; }
+.kokoro .big{ font-family:var(--round); font-weight:700; font-size:clamp(4.4rem,14vw,7rem); line-height:1; }
+.kokoro .ja{ margin-top:16px; font-family:var(--round); font-weight:700; font-size:clamp(1.15rem,3vw,1.45rem); }
+.kokoro .ko{ margin-top:6px; color:var(--soft); }
+.points{ list-style:none; margin:30px auto 0; padding:0; display:grid; gap:12px; max-width:860px; }
+@media (min-width:900px){ .points{ grid-template-columns:repeat(3,1fr); gap:18px; } }
+.points li{ border:2px solid var(--rule); border-radius:12px; padding:20px 16px; }
+.points b{ display:block; font-family:var(--round); font-weight:700; font-size:1.1rem; }
+.points span{ display:block; margin-top:4px; font-size:.9rem; color:var(--soft); }
+.kokoro .motto{ margin-top:28px; font-family:var(--round); font-weight:700; font-size:1.05rem; color:var(--soft); }
+
+/* 매장 */
+.shop{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:28px; }
+@media (min-width:900px){ .shop{ grid-template-columns:repeat(4,1fr); gap:18px; } }
+.shop img{ width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:10px; border:2px solid var(--rule); }
+
+/* 오시는 길 */
+.visit{ display:grid; gap:30px; margin-top:28px; }
+@media (min-width:900px){ .visit{ grid-template-columns:1fr 1fr; gap:48px; } }
+.info{ margin:0; }
+.info > div{ display:grid; grid-template-columns:92px 1fr; gap:14px; padding:14px 0; border-bottom:1px dashed var(--rule); }
+.info dt{ font-weight:700; }
+.info dd{ margin:0; }
+.info dd small{ display:block; color:var(--soft); font-size:.86rem; margin-top:4px; }
+.visit .links{ display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; }
+.mapframe{ width:100%; height:340px; border:2px solid var(--rule); border-radius:10px; }
+@media (min-width:900px){ .mapframe{ height:100%; min-height:420px; } }
+
+/* 푸터 */
+.foot{ background:var(--ink); color:#E9DCC6; padding:44px 0 120px; text-align:center; font-size:.84rem; margin-top:28px; }
+@media (min-width:900px){ .foot{ padding:52px 0; margin-top:40px; } }
+.foot img{ width:72px; margin:0 auto 12px; }
+.foot b{ display:block; font-family:var(--round); font-weight:700; font-size:1.6rem; letter-spacing:.2em; color:var(--cream); }
+.foot p{ margin-top:10px; }
+.jaf{ font-family:var(--round); font-weight:700; }
+
+/* 모바일 하단 바: 인스타그램(주) · 전화 · 길찾기 */
+.quick{ position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:6px; padding:8px 10px calc(8px + env(safe-area-inset-bottom)); background:rgba(69,48,31,.97); }
+.quick a{ display:flex; align-items:center; justify-content:center; min-height:48px; border:2px solid var(--cream); border-radius:8px; color:var(--cream); font-size:.86rem; font-weight:700; }
+.quick a.fill{ background:var(--cream); color:var(--ink); }
+@media (min-width:900px){ .quick{ display:none; } }
+
+/* 리빌: setInterval 구동 */
+.js .reveal{ opacity:0; transform:translateY(18px); transition:opacity .5s ease, transform .5s cubic-bezier(.2,.7,.2,1); transition-delay:var(--d,0s); }
+.js .reveal.in{ opacity:1; transform:none; }
+@media print{ .js .reveal{ opacity:1; transform:none; } }
+</style>
+<noscript><style>.reveal{ opacity:1 !important; transform:none !important; }</style></noscript>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="키리야카페 처음으로"><img src="kr-logo.webp" alt="" width="520" height="520" /><span><b>キリヤ</b><small>kiriya cafe</small></span></a>
+    <nav class="nav" aria-label="주요 메뉴"><a href="#sando">과일 산도</a><a href="#coffee">커피</a><a href="#tart">에그타르트</a><a href="#kokoro">키리야의 마음</a><a href="#visit">오시는 길</a></nav>
+    <a class="head-ig" href="https://www.instagram.com/kiriya_cafe/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="card arch reveal">
+        <p class="kc">kiriya Cafe</p>
+        <h1><span>キリヤ</span><img src="kr-logo.webp" alt="머리띠를 맨 너구리 로고" width="520" height="520" /></h1>
+        <p class="tag">ひとくちの幸せ。</p>
+        <p class="tag-ko">한입의 행복, KIRIYA</p>
+        <p class="intro">매일 직접 선별한 신선한 제철 과일과 100% 동물성 생크림으로 만드는 일본식 프리미엄 과일 산도, 겉은 바삭하고 속은 부드러운 에그타르트를 준비합니다.</p>
+        <div class="cta">
+          <a class="btn fill" href="https://www.instagram.com/kiriya_cafe/" target="_blank" rel="noopener">인스타그램 보기</a>
+          <a class="btn" href="#visit">오시는 길</a>
+        </div>
+        <p class="when">부산대역 1번 출구 도보 1분 · 화~일 11:00~22:00 · 월요일 휴무</p>
+      </div>
+      <figure class="card hero-pic reveal" style="--d:.1s">
+        <img src="kr-hero.webp" alt="키리야 스티커를 붙인 망고 과일 산도 두 개" width="900" height="1125" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="sec" id="sando" aria-labelledby="sando-h">
+    <div class="wrap">
+      <div class="card reveal">
+        <div class="ttl"><h2 id="sando-h">フルーツサンド</h2><span class="ko">과일 산도</span></div>
+        <p class="lead">매일 직접 선별한 제철 과일과 100% 동물성 생크림, 부드러운 식빵으로 만드는 일본식 프리미엄 과일 산도예요. 과일은 계절마다 바뀌어요.</p>
+        <div class="sando">
+          <figure><img loading="lazy" src="kr-sando-mango.webp" alt="망고가 통째로 들어간 과일 산도" width="700" height="874" /><figcaption><b>マンゴー</b><span>망고</span></figcaption></figure>
+          <figure><img loading="lazy" src="kr-sando-melon.webp" alt="멜론이 들어간 과일 산도" width="700" height="875" /><figcaption><b>メロン</b><span>멜론</span></figcaption></figure>
+          <figure><img loading="lazy" src="kr-sando-mikan.webp" alt="귤이 들어간 과일 산도" width="700" height="875" /><figcaption><b>みかん</b><span>귤</span></figcaption></figure>
+          <figure><img loading="lazy" src="kr-sando-mix.webp" alt="귤 · 키위 · 포도 · 파인애플이 들어간 과일 산도" width="700" height="874" /><figcaption><b>ミックス</b><span>과일 믹스</span></figcaption></figure>
+          <figure><img loading="lazy" src="kr-sando-row.webp" alt="여러 색 과일 산도가 줄지어 놓인 모습" width="700" height="874" /><figcaption><b>季節のサンド</b><span>계절 산도</span></figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="coffee" aria-labelledby="coffee-h">
+    <div class="wrap">
+      <div class="card reveal">
+        <div class="ttl">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M8 18h20v8a8 8 0 0 1-8 8h-4a8 8 0 0 1-8-8z"/><path d="M28 21h3a3.5 3.5 0 0 1 0 7h-3"/><path d="M6 37h26"/><path d="M15 5c-2 2 2 4 0 7M21 5c-2 2 2 4 0 7"/></svg>
+          <h2 id="coffee-h">Coffee</h2><span class="ja">コーヒー</span>
+          <span class="decaf">디카페인 +1.0</span>
+        </div>
+        <ul class="menu">
+          <li><div class="row"><b>아메리카노</b><span class="dots"></span><span class="pr">5.0</span></div></li>
+          <li><div class="row"><b>카페라떼</b><span class="dots"></span><span class="pr">5.5</span></div></li>
+          <li><div class="row"><b>오렌지카노</b><span class="dots"></span><span class="pr">6.5</span></div><p>상큼한 오렌지와 깊은 에스프레소가 만나 첫맛은 상큼하게, 끝맛은 부드러운 매력이 돋보이는 한 잔</p></li>
+          <li><div class="row"><b>수제 바닐라빈 라떼</b><span class="dots"></span><span class="pr">6.0</span></div><p>마다가스카르 바닐라빈을 직접 우려낸 바닐라빈의 깊은 풍미를 더한 라떼</p></li>
+          <li><span class="sig">Signature</span><div class="row"><b>버터 키리 라떼</b><span class="dots"></span><span class="pr">7.0</span></div><p>키리야(KIRIYA)의 시그니처! 버터의 풍부한 고소함과 달콤함이 녹아든 크림 라떼</p></li>
+          <li><span class="sig">Signature</span><div class="row"><b>블랙모카 크림라떼</b><span class="dots"></span><span class="pr">7.0</span></div><p>진한 고급 초코와 에스프레소, 쫀쫀한 키리크림을 올린 시그니처 라떼</p></li>
+        </ul>
+        <p class="menu-note">가격 단위 천 원 · 매장 메뉴판 기준이며 바뀔 수 있어요.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="tart" aria-labelledby="tart-h">
+    <div class="wrap">
+      <div class="card reveal">
+        <div class="ttl"><h2 id="tart-h">エッグタルト</h2><span class="ko">에그타르트 · 디저트</span></div>
+        <div class="duo">
+          <figure><img loading="lazy" src="kr-tart.webp" alt="흰 접시에 놓인 에그타르트 두 개" width="800" height="1000" /><figcaption><b>エッグタルト</b><p><span class="ja">外はサクッ、中はとろり。</span><br />겉은 바삭하고 속은 부드러운 에그타르트</p></figcaption></figure>
+          <figure><img loading="lazy" src="kr-parfait.webp" alt="망고를 듬뿍 올린 파르페" width="640" height="800" /><figcaption><b>季節のパフェ</b><p>제철 과일을 올린 시즌 파르페</p></figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="kokoro" aria-labelledby="kokoro-h">
+    <div class="wrap">
+      <div class="card kokoro reveal">
+        <p class="big" aria-hidden="true">心</p>
+        <h2 id="kokoro-h" class="ja">品質の良い材料、それがキリヤの「心」です。</h2>
+        <p class="ko">품질 좋은 재료, 그것이 키리야의 ‘<span class="jaf">心</span>(마음)’입니다.</p>
+        <ul class="points">
+          <li><b>旬のフルーツ</b><span>매일 직접 선별한 신선한 제철 과일</span></li>
+          <li><b>動物性生クリーム100%</b><span>100% 동물성 생크림</span></li>
+          <li><b>コーヒーと一緒に</b><span>디저트와 잘 어울리는 커피와 음료</span></li>
+        </ul>
+        <p class="motto">ひとつひとつ、ていねいに。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="shop" aria-labelledby="shop-h">
+    <div class="wrap">
+      <div class="card reveal">
+        <div class="ttl"><h2 id="shop-h">店内</h2><span class="ko">매장 · 단체 이용, 룸, 포장, 예약 가능</span></div>
+        <p class="lead">소중한 하루에 달콤한 쉼이 되는 공간이 되겠습니다.</p>
+        <div class="shop">
+          <img loading="lazy" src="kr-sign.webp" alt="키리야 카페 너구리 라이트박스 간판" width="800" height="1000" />
+          <img loading="lazy" src="kr-front.webp" alt="창가 화분과 분홍 입간판이 있는 매장 앞" width="720" height="900" />
+          <img loading="lazy" src="kr-night.webp" alt="조명이 켜진 밤의 매장 외관" width="800" height="1000" />
+          <img loading="lazy" src="kr-case.webp" alt="과일 산도가 가득한 진열 냉장고" width="900" height="900" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="card reveal">
+        <div class="ttl"><h2 id="visit-h">アクセス</h2><span class="ko">오시는 길</span></div>
+        <div class="visit">
+          <div>
+            <dl class="info">
+              <div><dt>주소</dt><dd>부산 금정구 금정로60번길 27-3 1층<small>부산대역 1번 출구에서 도보 1분(약 166m) · 맥도날드 맞은편 올리브영 골목</small></dd></div>
+              <div><dt>영업시간</dt><dd>화~일 11:00~22:00<small>매주 월요일 정기휴무</small></dd></div>
+              <div><dt>전화</dt><dd><a href="tel:050713965222">0507-1396-5222</a></dd></div>
+              <div><dt>편의</dt><dd>단체 이용 · 룸 · 포장 · 예약 · 와이파이 · 대기 공간</dd></div>
+              <div><dt>인스타그램</dt><dd><a href="https://www.instagram.com/kiriya_cafe/" target="_blank" rel="noopener">@kiriya_cafe</a></dd></div>
+            </dl>
+            <div class="links">
+              <a class="btn fill" href="https://www.instagram.com/kiriya_cafe/" target="_blank" rel="noopener">인스타그램</a>
+              <a class="btn" href="https://map.naver.com/p/entry/place/2010660094" target="_blank" rel="noopener">네이버 길찾기</a>
+              <a class="btn" href="tel:050713965222">전화하기</a>
+            </div>
+          </div>
+          <iframe class="mapframe" title="키리야카페 위치 지도" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%EB%B6%80%EC%82%B0%20%EA%B8%88%EC%A0%95%EA%B5%AC%20%EA%B8%88%EC%A0%95%EB%A1%9C60%EB%B2%88%EA%B8%B8%2027-3&amp;z=17&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="kr-logo.webp" alt="" width="520" height="520" loading="lazy" />
+    <b>キリヤ</b>
+    <p><span class="jaf">ひとくちの幸せ。</span>한입의 행복, KIRIYA<br />부산 금정구 금정로60번길 27-3 1층 · 0507-1396-5222 · 화~일 11:00~22:00 · 월 휴무 · © KIRIYA</p>
+  </div>
+</footer>
+
+<div class="quick" aria-label="빠른 연결">
+  <a class="fill" href="https://www.instagram.com/kiriya_cafe/" target="_blank" rel="noopener">인스타그램</a>
+  <a href="tel:050713965222">전화</a>
+  <a href="https://map.naver.com/p/entry/place/2010660094" target="_blank" rel="noopener">길찾기</a>
+</div>
+
+<script>
+(function(){
+  /* 리빌 */
+  var pending=[].slice.call(document.querySelectorAll('.reveal'));
+  pending.forEach(function(el){
+    var sib=[].slice.call(el.parentNode.children).filter(function(c){ return c.classList.contains('reveal'); });
+    if(sib.length>1 && !el.style.getPropertyValue('--d')){ el.style.setProperty('--d',(Math.min(sib.indexOf(el),4)*0.06)+'s'); }
+  });
+  var t=setInterval(function(){
+    if(!pending.length){ clearInterval(t); return; }
+    if(window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 4){
+      pending.forEach(function(el){ el.classList.add('in'); }); pending=[]; return;
+    }
+    var line=window.innerHeight*0.92;
+    pending=pending.filter(function(el){
+      if(el.getBoundingClientRect().top < line){ el.classList.add('in'); return false; }
+      return true;
+    });
+  },120);
+  /* 앵커 스크롤 */
+  var head=document.querySelector('.site-head');
+  [].forEach.call(document.querySelectorAll('a[href^="#"]'),function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href'); var el=id==='#top'?document.body:document.querySelector(id);
+      if(!el) return; e.preventDefault();
+      var start=window.pageYOffset, end=id==='#top'?0:el.getBoundingClientRect().top+start-head.offsetHeight+1;
+      var t0=Date.now(), dur=520;
+      var iv=setInterval(function(){
+        var p=Math.min((Date.now()-t0)/dur,1), e2=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;
+        window.scrollTo(0,start+(end-start)*e2);
+        if(p>=1) clearInterval(iv);
+      },16);
+    });
+  });
+})();
+</script>
+</body>
+</html>
